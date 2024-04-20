@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chelleyoungw/svg-logo-maker.git"
+    "url": "git+https://github.com/chelleyoungw/svg-logo-maker.git"
   },
   "author": "Chelle Wood",
   "license": "MIT",
