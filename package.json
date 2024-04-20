@@ -1,0 +1,19 @@
+{
+  "name": "svg-logo-maker",
+  "version": "1.0.0",
+  "description": "A command-line application that takes in user input to generate a logot and save it as an SVG file. The user can select a color, shape, and provide text to the logo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelleyoungw/svg-logo-maker.git"
+  },
+  "author": "Chelle Wood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chelleyoungw/svg-logo-maker/issues"
+  },
+  "homepage": "https://github.com/chelleyoungw/svg-logo-maker#readme"
+}
