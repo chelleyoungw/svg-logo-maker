@@ -16,7 +16,7 @@ function writeToFile(filename, answers) {
     // <g> tag wraps <text> tag so that the user font input layers on top of the shape (polygon), not behind
     svgString += '<g>';
     // Takes user input for shape choice and inserts it into SVG file
-    svgString += '${answers.shape}';
+    svgString += `${answers.shape}`;
 
     // Conditional check takes users input from choices array and adds shape properties and shape color to SVG string
     let shapeChoice;
@@ -32,7 +32,7 @@ function writeToFile(filename, answers) {
     }
 
     // <text> tag for text alignment, content and color taken from user prompt and gives font size of 40
-    svgString += '<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>';
+    svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
     // Closing </g> tag
     svgString += '</g>';
     // Closing </svg> tag
