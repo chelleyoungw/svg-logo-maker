@@ -19,7 +19,20 @@ function promptUser() {
             message: 'What shape would you like the logo to render?',
             choices: ['Triangle', 'Square', 'Circle'],
             name:'shape',
-        }
+        },
+        // Shape color prompt for user input
+        {
+            type: 'input',
+            message: 'What color would you like the shape to be? (enter color keyword OR a hexadecimal number)',
+            name: 'shapeBackgroundColor',
+        },
+        // Text prompt
+        {
+            type: 'input',
+            message: 'What text would you like the logo to display? (enter up to three characters)',
+            name: 'text',
+        },
+        // 
     ]);
 }
 
