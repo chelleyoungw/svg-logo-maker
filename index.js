@@ -25,14 +25,14 @@ function writeToFile(filename, answers) {
         svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
     } else if (answers.shape === 'Square') {
         shapeChoice = new Square();
-        svgString += `<rect width="100" height="100" fill="${answers.shapeBackgroundColor}"/>`;
+        svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
     } else {
         shapeChoice = new Circle();
-        svgString += `<circle cx="50" cy="50" r="40" fill="${answers.shapeBackgroundColor}"/>`;
+        svgString += `<circle cx="50" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
     }
 
     // <text> tag for text alignment, content and color taken from user prompt and gives font size of 40
-    svgString += '<text x="150" y="130" text-anchor="middle" font-size"40" fill="${answers.textColor}">{answers.text}</text>';
+    svgString += '<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>';
     // Closing </g> tag
     svgString += '</g>';
     // Closing </svg> tag
