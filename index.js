@@ -11,6 +11,17 @@ const { Triangle, Square, Circle } = require('./lib/shapes');
 
 
 // Function uses inquirer .prompt to prompt the user to answer questions in the CLI and save user input
-
+function promptUser() {
+    inquirer.prompt([
+        // Text prompt for user input
+        {
+            type: 'list',
+            message: 'What shape would you like the logo to render?',
+            choices: ['Triangle', 'Square', 'Circle'],
+            name:'shape',
+        }
+    ]);
+}
 
 // Calling promptUser function so inquirer prompts fire off when app is run
+promptUser();
