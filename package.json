@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/chelleyoungw/svg-logo-maker#readme",
   "dependencies": {
-    "inquirer": "^9.2.19"
+    "inquirer": "^8.2.6"
   },
   "devDependencies": {
     "jest": "^29.7.0"
