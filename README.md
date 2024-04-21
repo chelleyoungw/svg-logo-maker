@@ -35,7 +35,8 @@ This application allows users to create a simple logo for their clients and proj
 
 ## Live Screen Recording of Application Functionality
 
----attachvideo---[Uploading 21.04.2024 18_40.webm…]()
+---attachvideo---
+[21.04.2024 18_40.webm](https://github.com/chelleyoungw/svg-logo-maker/assets/153236313/81d05b33-174d-4a46-86a2-1553f43d1b89)
 
 
 ## Screenshots
