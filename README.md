@@ -35,7 +35,8 @@ This application allows users to create a simple logo for their clients and proj
 
 ## Live Screen Recording of Application Functionality
 
----attachvideo---
+---attachvideo---[Uploading 21.04.2024 18_40.webm…]()
+
 
 ## Screenshots
 
