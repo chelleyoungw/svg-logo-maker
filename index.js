@@ -28,7 +28,7 @@ function writeToFile(filename, answers) {
         svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
     } else {
         shapeChoice = new Circle();
-        svgString += `<circle cx="300" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
+        svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
     }
 
     // <text> tag for text alignment, content and color taken from user prompt and gives font size of 40

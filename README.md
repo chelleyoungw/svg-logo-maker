@@ -1,44 +1,107 @@
-# svg-logo-maker
-Module 10 Challenge: A Node.js command-line application that takes in user input to generate a logo and save it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
-## Name
-Choose a self-explaining name for your project.
+# SVG-Logo-Maker
+Week-10 Challenge
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Table of Contents
+
+ * [Description](#description)
+
+ * [Live-Screen-Recording-of-Application-Functionality](#live-screen-recording-of-application-functionality)
+
+ * [Screenshots](#screenshots)
+
+ * [Technologies-Used](#technologies-used)
+
+ * [Installation](#installation)
+
+ * [Credits](#credits)
+
+ * [Features](#features)
+
+ * [Usage-Information](#usage-information)
+
+ * [Contribution-Guidelines](#contribution-guidelines)
+
+ * [Test-Instructions](#test-instructions)
+
+ * [License](#license)
+
+ * [Questions](#questions)
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+This application allows users to create a simple logo for their clients and projects so that they can skip paying a graphic designer. The app uses inquirer to prompt the user in the CLI questions about how they want their logo to look (shape, shape color, text, text color). The user can input color name or the hexadecimal representation of the color for the shape color and text color. The text can only display 3 characters or less. Once the user has answered all prompts, then an SVG file is written using their answers to create a logo. This application also uses Jest to test the code to make sure it will render the shapes asked for. This application has possibilities for future additions like more polygon options, font options, text shapes, and color gradients or patterns.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-The following image shows the web application's appearance. You can also go to the web application by clicking the following link. https://chelleyoungw.github.io/INSERT-REPO-NAME-HERE/
+## Live Screen Recording of Application Functionality
 
-![The REPO NAME includes DESCRIBE THE APP PAGE.](./assets/images/INSERT-PIC-FILE-NAME-HERE.png)
+---attachvideo---
+
+## Screenshots
+
+Logo Generation
+
+![Screenshot1-week-10-challenge](./assets/images/CLI-text-prompt-screenshot.png)
+
+Examples of Generated Logos
+
+![Logo-example-triangle](./examples/logo.svg)
+
+![Logo-example-square](./examples/logo-2.svg)
+
+![Logo-example-circle](./examples/logo-3.svg)
+
+## Technologies Used
+
+This project is powered by Node.js v20.11.1, utilizes Inquirer v8.2.6 (node package manager), and file system module (node package manager). It also employs jest v29.7.0 (node package manager) for the unit testing conducted in this application. 
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+1. Clone the repo:
+   git clone https://github.com/chelleyoungw/svg-logo-maker.git
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+2. Open in VS Code. If you do not have VS code you must install it.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+3. Using the terminal, install node.js v20.11.1.
+
+4. Once node.js v16 is installed, in the terminal, utilize the command npm init -y to initialize and create a package.json where project files will be stored.
+
+5. Next, use the terminal to run the command npm i to install the dependencies associated with this application (developers may need to install inquirer and jest directly from the command line, to do so the command for inquirer will be npm i inquirer@8.2.6 to install v8.2.6 of the inquirer, and npm i jest to install the latest version of jest).
+
+6. To run the application, within the terminal, type the command node index.js.
+
+## Authors and Achknowledgements
+
+Chelle Wood is the author. Worked with ChatGPT breaking down code, and consulted https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial for assistance with SVG. Referenced https://github.com/rmessett15/SVG-Logo-Maker.git for assistance with code.
+
+## Features
+
+Features of this application include the users ability to generate logos quickly and easily through the use of SVG files, entirely from the command line. No UI (user interface) needed, and no front end tools needed.  
+
+## Usage Information
+
+To run this application, use the command line to navigate to the directory of the application, install all dependencies (npm i), then type the command node index.js. You will then be taken through a series of questions. Once all questions have been answered properly, a message will display to the command line telling you your logo has been generated. Find your new logo in the newly generated SVG file.
+
+For unit testing instructions, navigate to the Test Instructions section.
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Open to collaboration, if you choose to do so open an issue and modify any changes you would like to see on a feature branch and wait for approval before merging to the main branch.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Test Instructions
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+To run unit testing, open the terminal, and use the command npm run test.
+
+There is one test suite with three tests. The test suite is checking for a render() method to return a string for the corresponding SVG file with the given shape color (triangle, square, or circle).
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+MIT License
+
+## Questions
+
+Have additional questions? Click the links below to reach me through my GitHub account or Email address.
+
+[Link to Github](https://github.com/chelleyoungw)
+
+<a href="mailto:chelleyoungw@gmail.com">chelleyoungw@gmail.com</a>
