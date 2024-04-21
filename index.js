@@ -8,6 +8,19 @@ const fs = require('fs');
 const { Triangle, Square, Circle } = require('./lib/shapes');
 
 // Function writes the SVG file using user answers from inquirer prompts
+function writeToFile(filename, answers) {
+    // File starts as an empty string
+    let svgString = '';
+    // Sets width and height of logo container
+    svgString = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
+    // <g> tag wraps <text> tag so that the user font input layers on top of the shape (polygon), not behind
+    svgString += '<g>';
+    // Takes user input for shape choice and inserts it into SVG file
+    svgString += '${answers.shape}';
+
+    // Conditional check takes users input from choices array and adds shape properties and shape color to SVG string
+    
+}
 
 
 // Function uses inquirer .prompt to prompt the user to answer questions in the CLI and save user input
@@ -43,7 +56,7 @@ function promptUser() {
         // Error handling for text prompt (user must enter 3 characters or less for logo to generate)
         if (answers.text.length > 3) {
             console.log('Error: Text must be 3 characters or less');
-            return;
+            promptUser();
         } else {
             // Calling write file function to generate SVG file
             writeToFile('logo.svg', answers);
